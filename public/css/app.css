@@ -1,0 +1,278 @@
+html[data-theme=dark]:root {
+  --w1: #fafafa;
+  --w2: #e2e2e2;
+  --w3: #bbbbbb;
+  --b0: #0c0c0f;
+  --b1: #16161a;
+  --b2: #272727;
+  --b3: #1b1b1b;
+  --p1: rgb(91, 25, 153);
+  --p2: rgb(109, 28, 185);
+}
+
+html[data-theme=light]:root {
+  --b0: #fff;
+  --b1: #f5f5f5;
+  --b2: #ececec;
+  --b3: #bbbbbb;
+  --w1: #0c0c0f;
+  --w2: #272727;
+  --w3: #616161;
+  --p1: rgb(165, 96, 230);
+  --p2: rgb(126, 17, 228);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--b1);
+  color: var(--w2);
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--p1);
+}
+
+a:hover {
+  color: var(--p2);
+}
+
+#app > header {
+  display: block;
+}
+
+#app > header nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  padding: 0 100px;
+}
+
+#app > header a {
+  position: relative;
+  padding: 20px 15px;
+  color: var(--w3);
+}
+
+#app > header a:hover {
+  color: var(--w1);
+}
+
+#app > header #themeToggler {
+  border: none;
+  background: none;
+  color: var(--w3);
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0 0 0 15px;
+  outline: none;
+}
+
+#app > header #searchForm {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--b0);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#app > header #searchForm input,
+#app > header #searchForm button {
+  color: var(--w3);
+  background: var(--b0);
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#app > header #searchForm input {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+#app > header #searchForm button[type=submit] {
+  margin-left: 5px;
+  cursor: pointer !important;
+}
+
+h1,
+h2 {
+  position: relative;
+  -webkit-margin-before: 0.15em;
+          margin-block-start: 0.15em;
+  -webkit-margin-after: 0.35em;
+          margin-block-end: 0.35em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-rendering: geometricPrecision;
+}
+
+h2 {
+  -webkit-margin-before: 0.4em;
+          margin-block-start: 0.4em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+main {
+  min-height: 90vh;
+  margin: 0 100px;
+}
+
+main.morePadding {
+  padding-top: 200px;
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 150px;
+}
+
+main article header h3 {
+  color: var(--w3);
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 0 20px 0;
+}
+
+main article#all-quotes {
+  padding-top: 60px;
+}
+
+.quoteCard {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  width: auto;
+}
+
+.quoteCard a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--w2);
+  margin: 10px -20px;
+  padding: 15px 35px 20px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.quoteCard a:hover {
+  background: var(--b2);
+}
+
+.quoteCard .quoteCard-content {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.quoteCard .quoteCard-author {
+  font-size: 1.5rem;
+  font-weight: 300;
+  align-self: flex-end;
+  transform: translate(10px);
+  -webkit-transform: translate(10px);
+  -moz-transform: translate(10px);
+  -ms-transform: translate(10px);
+  -o-transform: translate(10px);
+}
+
+.quoteCard .quoteCard-updated_at {
+  display: none;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+main form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+main form input,
+main form select {
+  background: var(--b0);
+  box-sizing: border-box;
+  min-width: 400px;
+  border: 0;
+  margin: 5px 0;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+main form input,
+main form select,
+main form select option {
+  color: var(--w2);
+  font-weight: 200;
+}
+
+main form input[type=submit] {
+  cursor: pointer !important;
+}
+
+#quote {
+  min-height: 80vh;
+  padding: 50px 0;
+}
+
+#quote #quote-content {
+  position: relative;
+  display: block;
+}
+
+#quote #toEdit {
+  display: none;
+}
+
+footer {
+  padding: 50px 100px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+footer span {
+  font-size: 1rem;
+}
+
