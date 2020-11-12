@@ -5,7 +5,7 @@
 <main>
     <h2>@lang('content.add.title')</h2>
 
-    <form id="create-quote" action="{{ route('quote.store') }}" method="POST">
+    <form id="create-quote" action="{{ route('quote.store', ['lang'=>App::getLocale()]) }}" method="POST">
         @csrf
         <label>
             @lang('content.add.labels.group')

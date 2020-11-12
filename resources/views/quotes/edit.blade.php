@@ -5,7 +5,7 @@
 <main>
     <h2>@lang('content.edit.title')</h2>
 
-    <form id="edit-quote" action="{{ route('quote.update', $quote->uuid) }}" method="POST">
+    <form id="edit-quote" action="{{ route('quote.update', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}" method="POST">
         @csrf
         <label>
             @lang('content.edit.labels.group')
@@ -41,7 +41,7 @@
         
     </form>
 
-    <form id="delete-quote" action="{{ route('quote.destroy', $quote->uuid) }}" method="POST">
+    <form id="delete-quote" action="{{ route('quote.destroy', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}" method="POST">
         @csrf
         @method('DELETE')
         <input type="submit" value="@lang('content.edit.inputs.delete')">

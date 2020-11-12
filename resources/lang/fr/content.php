@@ -17,13 +17,13 @@ return [
     ],
 
     'home' => [
-        'subtitle' => 'Hors contexte, sans aucun sérieux.',
+        'subtitle' => 'Une phrase hors-contexte est une citation.',
         'latest' => [
             'title' => 'Récentes',
             'more' => 'Voir toutes les citations'
         ],
         'popular' => [
-            'title' => 'Citations à la une',
+            'title' => 'À la une',
             'more' => 'En voir plus'
         ],
     ],
@@ -68,7 +68,7 @@ return [
     ],
 
     'index' => [
-        'title' => 'Toutes les citations, cliquez les!',
+        'title' => 'Toutes les citations, sans exception.',
     ],
 
     'about' => [

@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\HomeController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +14,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-    // App::setLocale($lang);
+
+
+
+Route::prefix('{lang}')->group(function () {
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::view('/about', 'about')->name('about');
@@ -27,3 +29,8 @@ use App\Http\Controllers\HomeController;
     Route::post('/edit/{uuid}', [QuoteController::class, 'update'])->name('quote.update');
     Route::delete('/edit/{uuid}', [QuoteController::class, 'destroy'])->name('quote.destroy');
     Route::get('/{uuid}', [QuoteController::class, 'show'])->name('quote.show');
+});
+
+Route::get('/', function() {
+    return redirect('en/qsdd');
+});

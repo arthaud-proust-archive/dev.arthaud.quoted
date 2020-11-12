@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Models\Quote;
 use App\Models\Group;
 use Validator;
+use App;
 
 
 
@@ -19,12 +20,13 @@ class QuoteController extends Controller
             $quotes = Quote::where('group', request('group', 'none'))->get()->reverse();
         }
         return view('quotes.index', [
+            "lang"=>App::getLocale(),
             "quotes" => $quotes,
             "groups" => Group::all()
         ]);
     }
 
-    public function show(Request $request, $uuid) {
+    public function show(Request $request, $lang, $uuid) {
         if(!$quote = Quote::firstWhere('uuid', $uuid)) {
             abort(404);
         }
@@ -53,14 +55,14 @@ class QuoteController extends Controller
             'author' => request('author'),
             'content' => request('content'),
         ]);
-        return redirect()->route('quote.show', $quote->uuid);
+        return redirect()->route('quote.show', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]);
     }
 
-    public function edit(Request $request, $uuid) {
+    public function edit(Request $request, $lang, $uuid) {
         return view('quotes.edit', ["groups"=>Group::all(), "quote"=>Quote::firstWhere('uuid', $uuid)]);
     }
 
-    public function update(Request $request, $uuid) {
+    public function update(Request $request, $lang, $uuid) {
         $validator = Validator::make($request->all(), [
             'author' => 'required|string|max:255',
             'content' => 'required|string',
@@ -75,14 +77,14 @@ class QuoteController extends Controller
         $quote->touch();
         $quote->save();
 
-        return redirect()->route('quote.show', $quote->uuid);
+        return redirect()->route('quote.show', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]);
     }
 
-    public function destroy(Request $request, $uuid) {
+    public function destroy(Request $request, $lang, $uuid) {
         $quote = Quote::firstWhere('uuid', $uuid);
         $quote->delete();
 
-        return redirect()->route('home');
+        return redirect()->route('home', ['lang'=>App::getLocale()]);
     }
 
 

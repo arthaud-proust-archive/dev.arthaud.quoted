@@ -9,15 +9,15 @@ return [
     */
     'header' => [
         'home' => 'Home',
-        'quotes' => 'All quotes',
-        'new' => 'Add quote',
+        'quotes' => 'See all',
+        'new' => 'Write quote',
         'about' => 'About',
         'back' => 'Go back',
         'search' => 'Search for a quote'
     ],
 
     'home' => [
-        'subtitle' => 'Out of context, without any serious.',
+        'subtitle' => 'A sentence out of context is a quote.',
         'latest' => [
             'title' => 'Latest',
             'more' => 'See all quotes'
@@ -33,7 +33,7 @@ return [
     ],
     
     'add' => [
-        'title' => 'Add a quote',
+        'title' => 'Write a quote',
         'labels' => [
             'group' => 'Group',
             'content' => 'Content',

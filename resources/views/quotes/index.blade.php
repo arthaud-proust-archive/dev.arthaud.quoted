@@ -16,7 +16,7 @@ $orders = [
     <h2>@lang('content.index.title')</h2>
 
 
-    <form id="options" action="{{ route('quote.index') }}" method="GET">
+    <form id="options" action="{{ route('quote.index', ['lang'=>App::getLocale()]) }}" method="GET">
         <label>
             Order by
             <select name="order" id="order">
@@ -40,7 +40,7 @@ $orders = [
     <article id="all-quotes">
     @foreach($quotes as $quote) 
     <section class="quoteCard">
-        <a href="{{ route('quote.show', $quote->uuid) }}">
+        <a href="{{ route('quote.show', ['lang'=>App::getLocale(), 'uuid'=> $quote->uuid]) }}">
         <blockquote class="quoteCard-content">
             {{$quote->content}}
         </blockquote>

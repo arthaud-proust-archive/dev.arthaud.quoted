@@ -139,6 +139,10 @@ a:hover {
     }
 }
 
+.fade {
+    opacity: 0;
+}
+
 h1, h2 {
     position: relative;
     margin-block-start: 0.10em;
@@ -303,10 +307,12 @@ main form {
 }
 
 #quote {
+    position: relative;
     min-height: 80vh;
-    padding: 50px 0;
+    padding: 1px 0 50px 0;
     // width: calc( 100vw - 200px);
     #quote-content {
+        margin-top: 70px;
         position: relative;
         display: block;
     }

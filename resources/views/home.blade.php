@@ -3,15 +3,15 @@
 @section('title', "Home")
 @section('content')
 <main>
-    <h1 id="hero">{{config('app.name', 'Quotes')}}</h1>
-    <h2 class="subtitle">@lang('content.home.subtitle')</h2>
+    <h1 id="hero" class="fade">{{config('app.name', 'Quotes')}}</h1>
+    <h2 class="subtitle fade">@lang('content.home.subtitle')</h2>
     <article id="latest-quotes">
         <header>
-            <h3>@lang('content.home.latest.title') - <a href="{{route('quote.index')}}">@lang('content.home.latest.more')</a></h3>
+            <h3>@lang('content.home.latest.title') - <a href="{{route('quote.index', ['lang'=>App::getLocale()])}}">@lang('content.home.latest.more')</a></h3>
         </header>
         @foreach($lastQuotes as $quote) 
         <section class="quoteCard">
-            <a href="{{ route('quote.show', $quote->uuid) }}">
+            <a href="{{ route('quote.show', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}">
             <blockquote class="quoteCard-content">
                 {{$quote->content}}
             </blockquote>
@@ -29,11 +29,11 @@
 
     <article id="popular-quotes">
         <header>
-            <h3>@lang('content.home.popular.title') - <a href="{{route('quote.index', ['order'=>'popularity'])}}">@lang('content.home.popular.more')</a></h3>
+            <h3>@lang('content.home.popular.title') - <a href="{{route('quote.index', ['lang'=>App::getLocale(), 'order'=>'popularity'])}}">@lang('content.home.popular.more')</a></h3>
         </header>
         @foreach($popularQuotes as $quote) 
         <section class="quoteCard">
-            <a href="{{ route('quote.show', $quote->uuid) }}">
+            <a href="{{ route('quote.show', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}">
             <blockquote class="quoteCard-content">
                 {{$quote->content}}
             </blockquote>

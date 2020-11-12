@@ -79,9 +79,9 @@ function loadTheme() {
 
 function checkLang() {
     const userLang = (navigator.language || navigator.userLanguage).split('-')[0]; 
-    const langSubDomain = window.location.hostname.split('.')[0];
-    if(langSubDomain !== 'quoted' && langSubDomain !== userLang) {
-        $('main').prepend(`<a href="${window.location.href.replace('://', `://${userLang}.`)}" id="changeLang">${window._langDict[userLang]}</a>`)
+    const lang = window.location.pathname.split('/')[1];
+    if(!lang || lang !== userLang) {
+        $('main').prepend(`<a href="${window.location.href.replace(lang, userLang)}" id="changeLang">${window._langDict[userLang]}</a>`)
     }
 }
 
@@ -99,6 +99,18 @@ loadTheme()
 
 
 $(()=>{
+
+    $('h1.fade').animate({
+        opacity: 1
+    }, 1000, function() {
+        $('h2.fade').animate({
+            opacity: 1
+        }, 800, function() {
+            $('h1.fade, h2.fade').removeClass('fade');
+        });
+    });
+
+    
 
     checkLang()
 

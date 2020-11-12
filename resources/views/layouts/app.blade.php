@@ -92,7 +92,7 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
         <footer>
             <a class="credit" href="https://arthaud.dev">@lang('content.footer.credit')</a>
             <span class="copyright">&copy 2020 @lang('content.footer.right')</span>
-            <a class="about" href="{{ route('about') }}">@lang('content.footer.more')</a>
+            <!-- <a class="about" href="{{ route('about', ['lang'=>App::getLocale()]) }}">@lang('content.footer.more')</a> -->
         </footer>
     </div>
 </body>
