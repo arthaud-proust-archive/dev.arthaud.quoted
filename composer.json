@@ -62,7 +62,7 @@
             "php artisan migrate"
         ],
         "pre-update-cmd": [
-            "php artisan congfig:clear",
+            "php artisan config:clear",
             "php artisan migrate",
             "php artisan config:cache"
         ]
