@@ -47,19 +47,19 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <meta name="keywords" content="quoted, litterature, arthaud, proust">
     <meta name="theme-color" content="#16161a">
 
-    <meta property="og:title" content="{{ $title }}" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://quoted.arthaud.dev" />
+    <meta property="og:title" content="{{ $title }}" />
     <meta property="og:description" content="{{ $description }}" />
     <!-- <meta property="og:site_name" content="{{config('app.name', 'Quotes')}}" /> -->
-    <meta property="og:url" content="https://quoted.arthaud.dev" />
     <meta property="og:locale" content="en" />
     <meta property="og:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{{ $title }}" />
-    <meta name="twitter:description" content="{{ $description }}" />
-    <meta name="twitter:site" content="https://quoted.arthaud.dev" />
-    <meta name="twitter:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{ $title }}" />
+    <meta property="twitter:description" content="{{ $description }}" />
+    <meta property="twitter:site" content="https://quoted.arthaud.dev" />
+    <meta property="twitter:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Quotes" />
