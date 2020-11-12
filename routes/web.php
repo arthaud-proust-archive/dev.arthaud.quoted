@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/search', [QuoteController::class, 'result'])->name('quote.result');
+Route::view('/about', 'about')->name('about');
 Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
 Route::get('/new', [QuoteController::class, 'create'])->name('quote.create');

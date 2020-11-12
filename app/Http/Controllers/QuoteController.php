@@ -13,11 +13,22 @@ use Validator;
 class QuoteController extends Controller
 {
     public function index(Request $request) {
-        return view('quotes.index', ["quotes"=>Quote::all()->reverse()]);
+        if(request('order') == 'popularity') {
+            $quotes = Quote::where('group', request('group', 'none'))->orderBy('views', 'desc')->get();
+        } else {
+            $quotes = Quote::where('group', request('group', 'none'))->get()->reverse();
+        }
+        return view('quotes.index', [
+            "quotes" => $quotes,
+            "groups" => Group::all()
+        ]);
     }
 
     public function show(Request $request, $uuid) {
-        return view('quotes.show', ["quote"=>Quote::firstWhere('uuid', $uuid)]);
+        $quote = Quote::firstWhere('uuid', $uuid);
+        $quote->views +=1;
+        $quote->save();
+        return view('quotes.show', ["quote"=>$quote]);
     }
 
     public function create(Request $request) {

@@ -13,6 +13,9 @@ use Validator;
 class HomeController extends Controller
 {
     public function index(Request $request) {
-        return view('home', ["lastquotes"=>Quote::all()->take(5)]);
+        return view('home', [
+            "lastQuotes" => Quote::all()->reverse()->take(3),
+            "popularQuotes" => Quote::orderBy('views', 'desc')->get()->take(3)
+        ]);
     }
 }
