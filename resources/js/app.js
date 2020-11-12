@@ -2,7 +2,10 @@
 // window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 window.$ = window.jQuery = require('jquery');
-
+window._langDict = {
+    'en': `Switch to english version`,
+    'fr': `Passer à la version française`,
+}
 
 /*
 * FlowType.JS v1.1
@@ -74,6 +77,14 @@ function loadTheme() {
 }
 
 
+function checkLang() {
+    const userLang = (navigator.language || navigator.userLanguage).split('-')[0]; 
+    const langSubDomain = window.location.hostname.split('.')[0];
+    if(langSubDomain !== 'quoted' && langSubDomain !== userLang) {
+        $('main').prepend(`<a href="${window.location.href.replace('://', `://${userLang}.`)}" id="changeLang">${window._langDict[userLang]}</a>`)
+    }
+}
+
 
 /* Main */
 try {
@@ -88,6 +99,9 @@ loadTheme()
 
 
 $(()=>{
+
+    checkLang()
+
     $('#options select').on('change', function() {
         $(this).parents('form').submit()
     })

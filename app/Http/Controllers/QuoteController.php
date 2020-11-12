@@ -25,7 +25,9 @@ class QuoteController extends Controller
     }
 
     public function show(Request $request, $uuid) {
-        $quote = Quote::firstWhere('uuid', $uuid);
+        if(!$quote = Quote::firstWhere('uuid', $uuid)) {
+            abort(404);
+        }
         $quote->views +=1;
         $quote->save();
         return view('quotes.show', ["quote"=>$quote]);

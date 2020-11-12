@@ -12,6 +12,10 @@ $orders = [
 @section('title', "All quotes")
 @section('content')
 <main>
+
+    <h2>@lang('content.index.title')</h2>
+
+
     <form id="options" action="{{ route('quote.index') }}" method="GET">
         <label>
             Order by
@@ -32,7 +36,6 @@ $orders = [
             </select>
         </label>
     </form>
-    <h2>All Quotes here, click them!</h2>
 
     <article id="all-quotes">
     @foreach($quotes as $quote) 

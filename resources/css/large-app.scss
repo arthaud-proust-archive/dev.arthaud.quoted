@@ -42,6 +42,21 @@ a {
     display: inline-block;
     text-decoration: none;
     color: var(--p1);
+
+    &#changeLang {
+        position: relative;
+        text-align: center;
+        float: right;
+        width: auto;
+        padding: 10px 15px;
+        background: var(--b2);
+        color: var(--p2);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
 }
 a:hover {
     color: var(--p2)
@@ -174,6 +189,8 @@ main {
         }
 
     }
+
+    
 }
 
 .quoteCard {
@@ -232,6 +249,10 @@ main form {
         margin-bottom: 15px;
     }
 
+    select {
+        cursor: pointer;
+    }
+
     input, select {
         background: var(--b0);
         box-sizing: border-box;
@@ -262,6 +283,21 @@ main form {
         input {
             background: none;
             color: var(--r0);
+        }
+    }
+
+    &#options {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0; 
+        label {
+            font-size: 1rem;
+        }
+        select {
+            min-width: auto;
+            font-size: 1rem;
+            padding: 10px 15px;
+            margin-right: 10px;
         }
     }
 }

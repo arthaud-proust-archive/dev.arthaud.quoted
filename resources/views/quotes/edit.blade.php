@@ -3,14 +3,14 @@
 @section('title', "Edition")
 @section('content')
 <main>
-    <h2>Edit a quote</h2>
+    <h2>@lang('content.edit.title')</h2>
 
     <form id="edit-quote" action="{{ route('quote.update', $quote->uuid) }}" method="POST">
         @csrf
         <label>
-            Group
+            @lang('content.edit.labels.group')
             <select name="group" id="group">
-                <option value="none">None</option>
+                <option value="none">@lang('content.edit.inputs.none')</option>
                 @foreach($groups as $group)
                 <option value="{{$group->$uuid}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
                 @endforeach
@@ -22,8 +22,8 @@
         
 
         <label>
-            Content
-            <input name="content" id="content" value="{{ old('content')? old('content'):$quote->content }}" placeholder="I have a quote">
+            @lang('content.edit.labels.content')
+            <input name="content" id="content" value="{{ old('content')? old('content'):$quote->content }}" placeholder="@lang('content.edit.inputs.content')">
             @error('content')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -31,12 +31,12 @@
         
         
         <label>
-            Author
-            <input name="author" id="author" value="{{ old('author')? old('author'):$quote->author }}" placeholder="Martin Luther King">
+            @lang('content.edit.labels.author')
+            <input name="author" id="author" value="{{ old('author')? old('author'):$quote->author }}" placeholder="@lang('content.edit.inputs.author')">
             @error('author')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
-            <input type="submit" value="Save changes">
+            <input type="submit" value="@lang('content.edit.inputs.submit')">
         </label>
         
     </form>
@@ -44,7 +44,7 @@
     <form id="delete-quote" action="{{ route('quote.destroy', $quote->uuid) }}" method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" value="Delete">
+        <input type="submit" value="@lang('content.edit.inputs.delete')">
     </form>
 </main>
 @endsection

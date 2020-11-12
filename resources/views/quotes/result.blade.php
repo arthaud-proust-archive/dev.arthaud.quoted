@@ -4,13 +4,8 @@
 @section('content')
 <main>
     
-    @if(count($quotes)==0)
-    <h2>No any result...</h2>
-    @elseif(count($quotes)==1)
-    <h2>Search result</h2>
-    @else
-    <h2>Search results</h2>
-    @endif
+
+    <h2>@choice('content.results.title', count($quotes))</h2>
 
     <article id="all-quotes">
     @foreach($quotes as $quote) 

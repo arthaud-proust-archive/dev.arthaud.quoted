@@ -3,14 +3,14 @@
 @section('title', "New quote")
 @section('content')
 <main>
-    <h2>Add a quote</h2>
+    <h2>@lang('content.add.title')</h2>
 
     <form id="create-quote" action="{{ route('quote.store') }}" method="POST">
         @csrf
         <label>
-            Group
+            @lang('content.add.labels.group')
             <select name="group" id="group">
-                <option value="none">None</option>
+                <option value="none">@lang('content.add.inputs.none')</option>
                 @foreach($groups as $group)
                 <option value="{{$group->$uuid}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
                 @endforeach
@@ -22,8 +22,8 @@
         
 
         <label>
-            Content
-            <input name="content" id="content" value="{{ old('content') }}" placeholder="I have a quote">
+            @lang('content.add.labels.content')
+            <input name="content" id="content" value="{{ old('content') }}" placeholder="@lang('content.add.inputs.content')">
             @error('content')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -31,12 +31,12 @@
         
         
         <label>
-            Author
-            <input name="author" id="author" value="{{ old('author') }}" placeholder="Martin Luther King">
+            @lang('content.add.labels.author')
+            <input name="author" id="author" value="{{ old('author') }}" placeholder="@lang('content.add.inputs.author')">
             @error('author')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
-            <input type="submit" value="Add the quote">
+            <input type="submit" value="@lang('content.add.inputs.submit')">
         </label>
     </form>
 </main>

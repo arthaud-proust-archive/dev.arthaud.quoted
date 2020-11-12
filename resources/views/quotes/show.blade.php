@@ -12,7 +12,7 @@
     <span class="quote-updated_at">
         {{$quote->updated_at}}
     </span>
-    <a id="toEdit" href="{{ route('quote.edit', $quote->uuid) }}">Edit this quote</a>
+    <a id="toEdit" href="{{ route('quote.edit', $quote->uuid) }}">@lang('content.show.edit')</a>
 
 </main>
 @endsection

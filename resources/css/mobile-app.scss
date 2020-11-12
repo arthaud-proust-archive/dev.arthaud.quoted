@@ -43,6 +43,21 @@ a {
     display: inline-block;
     text-decoration: none;
     color: var(--p1);
+
+    &#changeLang {
+        position: relative;
+        text-align: center;
+        display: block;
+        margin: 30px 10px 0 10px;
+        padding: 10px 0;
+        background: var(--b2);
+        color: var(--p2);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
 }
 a:hover {
     color: var(--p2)
@@ -278,6 +293,22 @@ main form {
         input {
             background: none;
             color: var(--r0);
+        }
+    }
+
+    &#options {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0; 
+        label {
+            font-size: 1rem;
+        }
+        select {
+            min-width: auto;
+            font-size: 1rem;
+            padding: 10px 15px;
+            margin-right: 10px;
         }
     }
 }

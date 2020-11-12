@@ -19,16 +19,10 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
     <link href="{{ asset('css/mobile-app.css') }}" rel="stylesheet" media="only screen and (max-width: 768px)">
     <link href="{{ asset('css/large-app.css') }}" rel="stylesheet" media="only screen and (min-width: 768px)">
-    <!-- <script>
-        let link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = '{{asset("css/")}}'+(window.screen.width<768?'/mobile-':'/large-')+'app.css';
-        document.querySelector('head').appendChild(link);
-    </script>
-    <noscript>
-        <link href="{{ asset('css/mobile-app.css') }}" rel="stylesheet" media="only screen and (max-width: 768px)">
-        <link href="{{ asset('css/large-app.css') }}" rel="stylesheet" media="only screen and (min-width: 768px)">
-    </noscript> -->
+
+    <link rel="alternate" hreflang="fr-fr" href="https://fr.quotes.arthaud.dev" />
+    <link rel="alternate" hreflang="en-gb" href="https://en.quotes.arthaud.dev" />
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/fitty.min.js') }}" defer></script>
@@ -96,9 +90,9 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
         @yield('content')
 
         <footer>
-            <a class="credit" href="https://arthaud.dev">Made with passion by Arthaud Proust</a>
-            <span class="copyright">&copy 2020 All rights reserved</span>
-            <a class="about" href="{{ route('about') }}">About and more</a>
+            <a class="credit" href="https://arthaud.dev">@lang('content.footer.credit')</a>
+            <span class="copyright">&copy 2020 @lang('content.footer.right')</span>
+            <a class="about" href="{{ route('about') }}">@lang('content.footer.more')</a>
         </footer>
     </div>
 </body>

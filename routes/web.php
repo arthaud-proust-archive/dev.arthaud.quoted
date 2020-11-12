@@ -15,13 +15,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::view('/about', 'about')->name('about');
-Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
-Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
-Route::get('/new', [QuoteController::class, 'create'])->name('quote.create');
-Route::post('/new', [QuoteController::class, 'store'])->name('quote.store');
-Route::get('/edit/{uuid}', [QuoteController::class, 'edit'])->name('quote.edit');
-Route::post('/edit/{uuid}', [QuoteController::class, 'update'])->name('quote.update');
-Route::delete('/edit/{uuid}', [QuoteController::class, 'destroy'])->name('quote.destroy');
-Route::get('/{uuid}', [QuoteController::class, 'show'])->name('quote.show');
+    // App::setLocale($lang);
+
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::view('/about', 'about')->name('about');
+    Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
+    Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
+    Route::get('/new', [QuoteController::class, 'create'])->name('quote.create');
+    Route::post('/new', [QuoteController::class, 'store'])->name('quote.store');
+    Route::get('/edit/{uuid}', [QuoteController::class, 'edit'])->name('quote.edit');
+    Route::post('/edit/{uuid}', [QuoteController::class, 'update'])->name('quote.update');
+    Route::delete('/edit/{uuid}', [QuoteController::class, 'destroy'])->name('quote.destroy');
+    Route::get('/{uuid}', [QuoteController::class, 'show'])->name('quote.show');
