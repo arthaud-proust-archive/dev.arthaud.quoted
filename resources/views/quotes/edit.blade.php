@@ -12,7 +12,7 @@
             <select name="group" id="group">
                 <option value="none">@lang('content.edit.inputs.none')</option>
                 @foreach($groups as $group)
-                <option value="{{$group->$uuid}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
+                <option value="{{$group->uuid}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
                 @endforeach
             </select>
             @error('group')
