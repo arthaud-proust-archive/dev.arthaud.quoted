@@ -1,6 +1,6 @@
 <?php 
 
-$description = View::hasSection('description')?View::getSection('description'):'Read, write and share quoted around the world.';
+$description = View::hasSection('description')?View::getSection('description'):'Read, write and share all types of quotes around the world.';
 $title = View::hasSection('title')?View::getSection('title').' - '.config('app.name', 'Quotes'):'Quotes';
 ?>
 

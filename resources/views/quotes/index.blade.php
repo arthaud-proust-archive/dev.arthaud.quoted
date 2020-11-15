@@ -30,8 +30,9 @@ $orders = [
             Group
             <select name="group" id="group">
                 <option value="none">None</option>
+                <option value="all">All</option>
                 @foreach($groups as $group)
-                <option value="{{$group[1]}}" @if(Request::get('group')==$group[1]) selected @endif>{{ $group[0] }}</option>
+                <option value="{{$group->uuid}}" @if(Request::get('group')==$group->uuid) selected @endif>{{ $group->name }}</option>
                 @endforeach
             </select>
         </label>

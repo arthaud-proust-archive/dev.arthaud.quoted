@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://quoted.arthaud.dev/en</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/quotes</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/new</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/about</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/92006860-4a16-4d7f-9ef3-66f1105f7161</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/920067cb-b38f-4f94-81dc-f2193bd55dca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/92006797-a743-44d6-9447-593ee33ae6e3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/quotes?order=popularity</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd74a0-5be9-4034-8c72-e4ac31c026f3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7438-9660-4e49-a977-5674df73033e</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7345-6a97-4d78-851f-ce546b9d82ca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fdfcbf-681e-4b02-ae7c-a132c94e0646</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd74ba-a645-4609-9e47-da19421b1b37</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7488-7014-4e8f-b05b-09c361b44884</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7479-b9f8-4154-a95d-81e7ccf2f467</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd746a-8c23-41b5-9f0c-6356d595e78b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7454-1b15-4923-a91e-8c5e17cd3097</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7448-2d36-43a1-a9b2-2ffad06f84ee</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7416-5681-48a1-b7d4-9e782a38e13d</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd73ed-c9ae-429e-8525-e12291ffd1ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd73db-def1-4850-b2e6-eb0204ebf5b2</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd73cc-42ee-4ed4-9f7a-fd11e966be9f</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd73bd-33d9-450f-862b-fcee5f89e25b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7384-49e9-4420-9651-616617bef773</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd7373-8169-42cb-af4f-86c1b29141ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/91fd732e-0d34-4b93-8176-2645fbe83b21</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/92006860-4a16-4d7f-9ef3-66f1105f7161</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/920067cb-b38f-4f94-81dc-f2193bd55dca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/92006797-a743-44d6-9447-593ee33ae6e3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd74a0-5be9-4034-8c72-e4ac31c026f3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7438-9660-4e49-a977-5674df73033e</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7345-6a97-4d78-851f-ce546b9d82ca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fdfcbf-681e-4b02-ae7c-a132c94e0646</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd74ba-a645-4609-9e47-da19421b1b37</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7488-7014-4e8f-b05b-09c361b44884</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7479-b9f8-4154-a95d-81e7ccf2f467</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd746a-8c23-41b5-9f0c-6356d595e78b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7454-1b15-4923-a91e-8c5e17cd3097</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7448-2d36-43a1-a9b2-2ffad06f84ee</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7416-5681-48a1-b7d4-9e782a38e13d</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd73ed-c9ae-429e-8525-e12291ffd1ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd73db-def1-4850-b2e6-eb0204ebf5b2</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd73cc-42ee-4ed4-9f7a-fd11e966be9f</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd73bd-33d9-450f-862b-fcee5f89e25b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7384-49e9-4420-9651-616617bef773</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd7373-8169-42cb-af4f-86c1b29141ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/en/edit/91fd732e-0d34-4b93-8176-2645fbe83b21</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+
+
+
+<url>
+  <loc>https://quoted.arthaud.dev/fr</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/quotes</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/new</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/about</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/92006860-4a16-4d7f-9ef3-66f1105f7161</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/920067cb-b38f-4f94-81dc-f2193bd55dca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/92006797-a743-44d6-9447-593ee33ae6e3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/quotes?order=popularity</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd74a0-5be9-4034-8c72-e4ac31c026f3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7438-9660-4e49-a977-5674df73033e</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7345-6a97-4d78-851f-ce546b9d82ca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fdfcbf-681e-4b02-ae7c-a132c94e0646</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd74ba-a645-4609-9e47-da19421b1b37</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7488-7014-4e8f-b05b-09c361b44884</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7479-b9f8-4154-a95d-81e7ccf2f467</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd746a-8c23-41b5-9f0c-6356d595e78b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7454-1b15-4923-a91e-8c5e17cd3097</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7448-2d36-43a1-a9b2-2ffad06f84ee</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7416-5681-48a1-b7d4-9e782a38e13d</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd73ed-c9ae-429e-8525-e12291ffd1ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd73db-def1-4850-b2e6-eb0204ebf5b2</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd73cc-42ee-4ed4-9f7a-fd11e966be9f</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd73bd-33d9-450f-862b-fcee5f89e25b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7384-49e9-4420-9651-616617bef773</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd7373-8169-42cb-af4f-86c1b29141ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/91fd732e-0d34-4b93-8176-2645fbe83b21</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/92006860-4a16-4d7f-9ef3-66f1105f7161</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/920067cb-b38f-4f94-81dc-f2193bd55dca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/92006797-a743-44d6-9447-593ee33ae6e3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd74a0-5be9-4034-8c72-e4ac31c026f3</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7438-9660-4e49-a977-5674df73033e</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7345-6a97-4d78-851f-ce546b9d82ca</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fdfcbf-681e-4b02-ae7c-a132c94e0646</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd74ba-a645-4609-9e47-da19421b1b37</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7488-7014-4e8f-b05b-09c361b44884</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7479-b9f8-4154-a95d-81e7ccf2f467</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd746a-8c23-41b5-9f0c-6356d595e78b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7454-1b15-4923-a91e-8c5e17cd3097</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7448-2d36-43a1-a9b2-2ffad06f84ee</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7416-5681-48a1-b7d4-9e782a38e13d</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd73ed-c9ae-429e-8525-e12291ffd1ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd73db-def1-4850-b2e6-eb0204ebf5b2</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd73cc-42ee-4ed4-9f7a-fd11e966be9f</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd73bd-33d9-450f-862b-fcee5f89e25b</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7384-49e9-4420-9651-616617bef773</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd7373-8169-42cb-af4f-86c1b29141ba</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://quoted.arthaud.dev/fr/edit/91fd732e-0d34-4b93-8176-2645fbe83b21</loc>
+  <lastmod>2020-11-15T10:27:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
