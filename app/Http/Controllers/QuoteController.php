@@ -17,7 +17,7 @@ class QuoteController extends Controller
         if(request('group') == 'all') {
             $quotes = Quote::orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
         } else {
-            $quotes = Quote::where('group', request('group', 'none'))->orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
+            $quotes = Quote::where('group', request('group', 'all'))->orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
         }
         return view('quotes.index', [
             "lang"=>App::getLocale(),
