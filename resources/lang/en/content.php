@@ -18,9 +18,13 @@ return [
 
     'home' => [
         'subtitle' => 'A sentence out of context is a quote.',
+        'philo' => [
+            'title' => 'Philosophicals',
+            'more' => 'See all quotes'
+        ],
         'latest' => [
             'title' => 'Latest',
-            'more' => 'See all quotes'
+            'more' => 'See more'
         ],
         'popular' => [
             'title' => 'Popular quotes',

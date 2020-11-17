@@ -18,12 +18,16 @@ return [
 
     'home' => [
         'subtitle' => 'Une phrase hors-contexte est une citation.',
-        'latest' => [
-            'title' => 'Récentes',
+        'philo' => [
+            'title' => 'Philosophiques',
             'more' => 'Voir toutes les citations'
         ],
+        'latest' => [
+            'title' => 'Récentes',
+            'more' => 'En voir plus'
+        ],
         'popular' => [
-            'title' => 'À la une',
+            'title' => 'Populaires',
             'more' => 'En voir plus'
         ],
     ],

@@ -29,8 +29,8 @@ $orders = [
         <label>
             Group
             <select name="group" id="group">
-                <option value="none">None</option>
-                <option value="all">All</option>
+                <option value="none" @if(Request::get('group')=="none") selected @endif>None</option>
+                <option value="all" @if(Request::get('group')=="all") selected @endif>All</option>
                 @foreach($groups as $group)
                 <option value="{{$group->uuid}}" @if(Request::get('group')==$group->uuid) selected @endif>{{ $group->name }}</option>
                 @endforeach

@@ -16,7 +16,7 @@
             @endif
         @endforeach
     @else 
-        <a href="#" onclick="window.history.back();">
+        <a href="#" id="goBack">
             @lang('content.header.back')
         </a>
         <a href="{{ route('home', ['lang'=>App::getLocale()]) }}">

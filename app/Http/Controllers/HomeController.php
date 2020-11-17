@@ -14,6 +14,7 @@ class HomeController extends Controller
 {
     public function index(Request $request) {
         return view('home', [
+            "philoQuotes" => Quote::where('group', 'philo')->get()->reverse()->take(3),
             "lastQuotes" => Quote::all()->reverse()->take(3),
             "popularQuotes" => Quote::orderBy('views', 'desc')->get()->take(3)
         ]);

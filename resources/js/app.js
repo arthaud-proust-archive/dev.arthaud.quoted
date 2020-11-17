@@ -118,6 +118,17 @@ $(()=>{
         $(this).parents('form').submit()
     })
 
+    $('#goBack').on('click', function() {
+        const currentLang = window.location.pathname.split('/')[1];
+        const previousLang = document.referrer.replace(/(http|https):\/\//g, '').split('/')[1];
+
+        if(previousLang !== currentLang) {
+           document.location.href = '/'+currentLang;
+        } else {
+            window.history.back();
+        }
+    })
+
     $('#themeToggler').on('click', function() {
         if($('html').attr('data-theme') == 'dark') {
             setTheme('light')
