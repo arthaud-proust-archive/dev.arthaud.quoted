@@ -14,10 +14,10 @@ use App;
 class QuoteController extends Controller
 {
     public function index(Request $request) {
-        if(request('group') == 'all') {
+        if(request('group', 'all') == 'all') {
             $quotes = Quote::orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
         } else {
-            $quotes = Quote::where('group', request('group', 'all'))->orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
+            $quotes = Quote::where('group', request('group', 'none'))->orderBy( (request('order') == 'popularity'?'views':'id') , 'desc')->get();
         }
         return view('quotes.index', [
             "lang"=>App::getLocale(),
