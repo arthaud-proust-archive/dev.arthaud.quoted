@@ -7,16 +7,27 @@ use Illuminate\Support\Str;
 use App\Models\Quote;
 use App\Models\Group;
 use Validator;
+use Illuminate\Support\Facades\Auth;
 
 
 
 class HomeController extends Controller
 {
     public function index(Request $request) {
-        return view('home', [
-            "philoQuotes" => Quote::where('group', 'philo')->get()->reverse()->take(3),
-            "lastQuotes" => Quote::all()->reverse()->take(3),
-            "popularQuotes" => Quote::orderBy('views', 'desc')->get()->take(3)
-        ]);
+        if(Auth::check() && Auth::user()->isAdmin()) {
+            return view('home', [
+                "toverifQuotes" => Quote::unVerified()->get()->reverse(),
+                "philoQuotes" => Quote::where('group', 'philo')->verified()->get()->reverse()->take(3),
+                "lastQuotes" => Quote::all()->reverse()->take(3),
+                "popularQuotes" => Quote::orderBy('views', 'desc')->get()->take(3)
+            ]);
+        } else {
+            return view('home', [
+                "philoQuotes" => Quote::where('group', 'philo')->verified()->get()->reverse()->take(3),
+                "lastQuotes" => Quote::all()->reverse()->take(3),
+                "popularQuotes" => Quote::orderBy('views', 'desc')->get()->take(3)
+            ]);
+        }
+
     }
 }

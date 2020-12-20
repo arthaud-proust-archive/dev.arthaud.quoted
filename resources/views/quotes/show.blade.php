@@ -12,7 +12,9 @@
     <span class="quote-updated_at">
         {{$quote->updated_at}}
     </span>
-    <a id="toEdit" href="{{ route('quote.edit', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}">@lang('content.show.edit')</a>
 
+    @if($quote->canUserTouch()) 
+    <a id="toEdit" href="{{ route('quote.edit', ['hashid'=>$quote->hashid]) }}">@lang('content.show.edit')</a>
+    @endif
 </main>
 @endsection

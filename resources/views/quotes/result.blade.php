@@ -5,12 +5,12 @@
 <main>
     
 
-    <h2>@choice('content.results.title', count($quotes))</h2>
+    <h1 id="hero" class="hero-min">@choice('content.results.title', count($quotes))</h1>
 
     <article id="all-quotes">
     @foreach($quotes as $quote) 
     <section class="quoteCard">
-        <a href="{{ route('quote.show', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}">
+        <a href="{{ route('quote.show', ['uuid'=>$quote->uuid]) }}">
         <blockquote class="quoteCard-content">
             {{$quote->content}}
         </blockquote>

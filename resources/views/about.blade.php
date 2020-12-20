@@ -3,7 +3,7 @@
 @section('title', "About")
 @section('content')
 <main>
-    <h1 id="hero">@lang('content.about.title')</h1>
+    <h1 id="hero" class="hero-min">@lang('content.about.title')</h1>
 
     <article id="why">
         <header>

@@ -1,39 +1,31 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-<?php
-
-$orders = [
-    ['Creation', 'creation'],
-    ['Popularity', 'popularity']
-];
-
-?>
-
 @section('title', "All quotes")
 @section('content')
 <main>
 
-    <h2>@lang('content.index.title')</h2>
+    <h2 class="hero-min">@lang('content.index.title')</h2>
 
 
-    <form id="options" action="{{ route('quote.index', ['lang'=>App::getLocale()]) }}" method="GET">
+    <form id="options" action="{{ route('quote.index') }}" method="GET">
         <label>
-            Order by
+            @lang('content.index.orderby.label')
             <select name="order" id="order">
-                @foreach($orders as $order)
+                @foreach(__('content.index.orderby.items') as $order)
                 <option value="{{$order[1]}}" @if(Request::get('order')==$order[1]) selected @endif>{{ $order[0] }}</option>
                 @endforeach
             </select>
         </label>
 
         <label>
-            Group
+            @lang('content.index.group.label')
             <select name="group" id="group">
-                <option value="all" @if(Request::get('group')=="all") selected @endif>All</option>
+                @foreach(__('content.index.group.items') as $group)
+                <option value="{{$group[1]}}" @if(Request::get('group')==$group[1]) selected @endif>{{ $group[0] }}</option>
+                @endforeach
                 @foreach($groups as $group)
                 <option value="{{$group->uuid}}" @if(Request::get('group')==$group->uuid) selected @endif>{{ $group->name }}</option>
                 @endforeach
-                <option value="none" @if(Request::get('group')=="none") selected @endif>None</option>
             </select>
         </label>
     </form>
@@ -41,7 +33,7 @@ $orders = [
     <article id="all-quotes">
     @foreach($quotes as $quote) 
     <section class="quoteCard">
-        <a href="{{ route('quote.show', ['lang'=>App::getLocale(), 'uuid'=> $quote->uuid]) }}">
+        <a href="{{ route('quote.show', ['hashid'=> $quote->hashid]) }}">
         <blockquote class="quoteCard-content">
             {{$quote->content}}
         </blockquote>

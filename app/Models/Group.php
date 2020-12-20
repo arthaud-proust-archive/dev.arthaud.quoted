@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+
 
 class Group extends Model
 {
@@ -17,5 +19,19 @@ class Group extends Model
     protected $fillable = [
         'uuid',
         'name',
+        'role'
     ];
+
+
+    public function canUserPost() {
+        if(!Auth::check())
+            return false;
+        
+        $user = Auth::user();
+
+        if($user->isAdmin())
+            return true;
+
+        return $user->role >= $this->minrole;
+    }
 }

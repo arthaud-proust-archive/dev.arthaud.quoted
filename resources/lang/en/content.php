@@ -13,7 +13,8 @@ return [
         'new' => 'Write quote',
         'about' => 'About',
         'back' => 'Go back',
-        'search' => 'Search for a quote'
+        'search' => 'Search for a quote',
+        'contribute' => 'Contribute'
     ],
 
     'home' => [

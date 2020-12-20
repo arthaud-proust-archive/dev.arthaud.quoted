@@ -5,7 +5,7 @@
 <main>
     <h2>@lang('content.add.title')</h2>
 
-    <form id="create-quote" action="{{ route('quote.store', ['lang'=>App::getLocale()]) }}" method="POST">
+    <form id="create-quote" action="{{ route('quote.store') }}" method="POST">
         @csrf
         <label>
             @lang('content.add.labels.group')
@@ -23,7 +23,7 @@
 
         <label>
             @lang('content.add.labels.content')
-            <input name="content" id="content" value="{{ old('content') }}" placeholder="@lang('content.add.inputs.content')">
+            <textarea name="content" id="content" value="" placeholder="@lang('content.add.inputs.content')">{{ old('content') }}</textarea>
             @error('content')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror

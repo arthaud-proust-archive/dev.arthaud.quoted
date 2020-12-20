@@ -5,25 +5,25 @@
 <main>
     <h2>@lang('content.edit.title')</h2>
 
-    <form id="edit-quote" action="{{ route('quote.update', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}" method="POST">
+    <form id="edit-quote" action="{{ route('quote.update', ['hashid'=>$quote->hashid]) }}" method="POST">
         @csrf
-        <label>
+        <!-- <label>
             @lang('content.edit.labels.group')
             <select name="group" id="group">
                 <option value="none">@lang('content.edit.inputs.none')</option>
                 @foreach($groups as $group)
-                <option value="{{$group->uuid}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
+                <option value="{{$group->id}}" @if($group->uuid == old('content')) selected @endif>{{$group->name}}</option>
                 @endforeach
             </select>
             @error('group')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
-        </label>
+        </label> -->
         
 
         <label>
             @lang('content.edit.labels.content')
-            <input name="content" id="content" value="{{ old('content')? old('content'):$quote->content }}" placeholder="@lang('content.edit.inputs.content')">
+            <textarea rows="3" name="content" id="content" value="{{ old('content')? old('content'):$quote->content }}" placeholder="@lang('content.edit.inputs.content')">{{old('content')? old('content'):$quote->content}}</textarea>
             @error('content')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -41,7 +41,7 @@
         
     </form>
 
-    <form id="delete-quote" action="{{ route('quote.destroy', ['lang'=>App::getLocale(), 'uuid'=>$quote->uuid]) }}" method="POST">
+    <form id="delete-quote" action="{{ route('quote.destroy', ['hashid'=>$quote->hashid]) }}" method="POST">
         @csrf
         @method('DELETE')
         <input type="submit" value="@lang('content.edit.inputs.delete')">

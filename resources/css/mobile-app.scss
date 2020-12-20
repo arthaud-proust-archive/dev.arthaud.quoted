@@ -12,6 +12,11 @@ html[data-theme="dark"]:root {
     --p2: #9d4ce9;
 
     --r0: #b81f1f;
+    
+    --warn: rgb(210, 105, 30);
+    --success: rgb(31 120 39);
+    --error: rgb(184, 31, 31);
+    --info: rgb(60, 60, 180);
 }
 html[data-theme="light"]:root {
     --b0: #fff;
@@ -28,6 +33,10 @@ html[data-theme="light"]:root {
 
     --r0: #e65454;
 
+    --warn: rgb(239 114 25);
+    --success: rgb(88, 155, 57);
+    --error: rgb(230, 84, 84);
+    --info: rgb(78 78 233);
 }
 
 body {
@@ -44,12 +53,12 @@ a {
     text-decoration: none;
     color: var(--p1);
 
-    &#changeLang {
+    &.btn, &#changeLang {
         position: relative;
         text-align: center;
         display: block;
-        margin: 30px 10px 0 10px;
-        padding: 10px 0;
+        margin: 10px 10px 0 10px;
+        padding: 10px 15px;
         background: var(--b2);
         color: var(--p2);
         border-radius: 10px;
@@ -57,6 +66,9 @@ a {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+    }
+    &.btn-margin {
+        margin-top: 30px;
     }
 }
 a:hover {
@@ -71,7 +83,6 @@ a:hover {
     z-index:1000;
     background: linear-gradient(180deg, var(--b1), #00000000);
     nav {
-        
         position: relative;
         display: flex;
         flex-direction: row;
@@ -96,27 +107,34 @@ a:hover {
             color: var(--w1)
         }
     }
-    
 
-    #themeToggler {
-        position: absolute;
-        top: 10px;
-        right: 10px;
+    #themeToggler, #user  {
+        // position: absolute;
+        // top: 10px;
+        // right: 10px;
+        justify-self: flex-end;
+        display: inline-block;
         border:none;
         background:none;
         color: var(--w3);
         cursor: pointer;
-        padding: 10px 15px;
-        margin: 0 0 0 5px;
+        padding: 10px 10px;
+        margin: 0 10px 0 0;
         outline:none;
-
         svg {
-            vertical-align: middle;
+            display: inline;
+            // vertical-align: middle;
+            vertical-align: baseline;
             margin: auto
         }
+    } 
+    #user {
+        // margin: 0 0 0 15px;
+        margin: 0 5px 0 auto;
     }
 
     #searchForm {
+        order: 20;
         position: relative;
         width: 100%;
         padding-top: 10px;
@@ -164,6 +182,40 @@ a:hover {
     opacity: 0;
 }
 
+.alert-container {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    .alert {
+        display: inline-block;
+        margin: 25px auto 15px auto;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+        color: var(--b0);
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+
+
+        &.alert-warn {
+            background:var(--warn);
+        }
+        &.alert-success {
+            background: var(--success);
+        }
+        &.alert-error {
+            background: var(--error);
+        }
+        &.alert-info {
+            background: var(--info);
+        }
+    }
+}
+
+
 h1, h2 {
     position: relative;
     margin-block-start: 0.7em;
@@ -171,6 +223,10 @@ h1, h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     text-rendering: geometricPrecision;
+
+    &.hero-min {
+        margin-block-start: 2em;
+    }
 }
 
 h2 {
@@ -200,7 +256,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
         header h3 {
             color: var(--w3);
             font-size: 1.1rem;
@@ -209,10 +265,56 @@ main {
             // margin:0;
         }
 
+        p {
+            margin-bottom: 10px;
+        }
+
         &#all-quotes {
             padding-top: 60px;
         }
+        &#join {
+            align-items: center;
+            // margin-top: 50px;
+            // margin-bottom: 200px;
+            h3 {
+                margin: 0;
+            }
+        }
+        & .actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .actions-btn {
+                color: #e2e2e2;
+                // color: var(--p1);
+                background: var(--p1);
+                box-sizing: border-box;
+                font-size: 1.4rem;
+                padding: 10px 15px;
+                margin:15px 15px 0 15px;
+                // border: 0;
+                border: 1px solid var(--p1);
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
 
+                &:hover {
+                    color: var(--w3);
+                    background: var(--p2);
+                }
+            }
+            .actions-btn:nth-child(2) {
+                color: var(--w3);
+                background: none;
+                border: 0;
+                &:hover {
+                    color: var(--p2);
+                }
+            }
+        }
     }
 }
 
@@ -232,6 +334,7 @@ main {
         font-size: 2rem;
         font-weight: 600;
         margin: 0;
+        word-break: break-all;
     }
     .quoteCard-author {
         font-size: 1.3rem;
@@ -249,12 +352,49 @@ main {
     }
 }
 
+
+.userCard {
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--w2);
+        margin: 10px 0px;
+        padding: 15px 35px 20px 20px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+
+    }
+    a:hover {
+        background: var(--b2);
+    }
+
+    .userCard-name {
+        font-size: 2rem;
+    }
+    .userCard-role {
+        color: var(--p1);
+        font-size: 1rem;
+    }
+    .userCard-email {
+        font-size: 1.3rem;
+    }
+}
+
 main form {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px 0 100px 0;
+
+    a {
+        margin: 5px;
+        padding: 5px;
+    }
 
     label {
         width: 90%;
@@ -264,9 +404,15 @@ main form {
         align-items: flex-start;
         font-size: 1rem;
         margin-bottom: 15px;
+
+        .invalid-feedback {
+            font-size: 0.8rem;
+            color: var(--r0);
+            margin-bottom: 10px;
+        }
     }
 
-    input, select {
+    input, select, button, textarea {
         position: relative;
         background: var(--b0);
         box-sizing: border-box;
@@ -281,13 +427,17 @@ main form {
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
     }
+    button {
+        width: 90%;
+    }
 
-    input, select, select option {
+    input, select, select option, button, textarea {
         color: var(--w2);
         font-weight: 200;
     }
 
-    input[type="submit"] {
+    input[type="submit"], button {
+        margin: 15px 0;
         cursor: pointer !important;
     }
 
@@ -315,6 +465,14 @@ main form {
             margin-right: 10px;
         }
     }
+
+    &#roleForm {
+        width: 100%;
+
+        input[type="submit"] {
+            width: 90%;
+        }
+    }
 }
 
 #quote {
@@ -327,10 +485,7 @@ main form {
         font-weight: 400;
         position: relative;
         display: block;
-    }
-
-    #toEdit {
-        display: none;
+        word-break: break-all;
     }
 }
 

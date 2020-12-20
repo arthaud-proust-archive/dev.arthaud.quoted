@@ -40,4 +40,31 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $roles = [
+        'admin' => 4, 
+        'user' => 1
+    ];
+
+    public function getHashidAttribute()
+    {
+        return encodeId($this->id);
+    }
+
+    public function isAdmin()
+    {
+        return $this->role >= $this->roles['admin'];
+    }
+
+    public function hasRole($role)
+    {
+        if(!array_key_exists($role, $this->roles))
+            return false;
+        return $this->role >= $this->roles[$role];
+    }
+
+    public function getRolenameAttribute() 
+    {
+        return array_search($this->role, $this->roles);
+    }
 }

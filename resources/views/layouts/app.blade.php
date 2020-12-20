@@ -20,10 +20,6 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <link href="{{ asset('css/mobile-app.css') }}" rel="stylesheet" media="only screen and (max-width: 768px)">
     <link href="{{ asset('css/large-app.css') }}" rel="stylesheet" media="only screen and (min-width: 768px)">
 
-    <link rel="alternate" hreflang="fr-fr" href="https://fr.quoted.arthaud.dev" />
-    <link rel="alternate" hreflang="en-gb" href="https://en.quoted.arthaud.dev" />
-
-
     <!-- Scripts -->
     <script src="{{ asset('js/fitty.min.js') }}" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,7 +40,7 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
 
     <meta name="subject" content="Quotes">
     <meta name="description" content="{{ $description }}" />
-    <meta name="keywords" content="quoted, litterature, arthaud, proust">
+    <meta name="keywords" content="quoted, philosophie, litterature, arthaud, proust">
     <meta name="theme-color" content="#16161a">
 
     <meta property="og:type" content="website" />
@@ -87,12 +83,25 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
             @include('layouts.nav')
         </header>
 
+        <div class="container">
+              
+        @if(session('status'))
+        <div class="alert-container">
+            <div class="alert alert-{{session('status')}}" role="alert">
+                {{ session('content') }}
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                <!-- </button> -->
+            </div>
+        </div>
+        @endif
+
         @yield('content')
 
         <footer>
             <a class="credit" href="https://arthaud.dev">@lang('content.footer.credit')</a>
             <span class="copyright">&copy 2020 @lang('content.footer.right')</span>
-            <!-- <a class="about" href="{{ route('about', ['lang'=>App::getLocale()]) }}">@lang('content.footer.more')</a> -->
+            <!-- <a class="about" href="{{ route('about') }}">@lang('content.footer.more')</a> -->
         </footer>
     </div>
 </body>

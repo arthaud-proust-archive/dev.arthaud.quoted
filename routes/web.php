@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,20 +18,35 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::prefix('{lang}')->group(function () {
 
-    Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::view('/about', 'about')->name('about');
-    Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
-    Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
+Auth::routes();
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/me', [UserController::class, 'show'])->name('user.me');
+    Route::get('/user/{hashid}', [UserController::class, 'show'])->name('user.show');
+    Route::get('/me/quotes', [UserController::class, 'quotes'])->name('user.quotes');
+    Route::get('/me/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::post('/me/edit', [UserController::class, 'update'])->name('user.update');
+
+
     Route::get('/new', [QuoteController::class, 'create'])->name('quote.create');
     Route::post('/new', [QuoteController::class, 'store'])->name('quote.store');
-    Route::get('/edit/{uuid}', [QuoteController::class, 'edit'])->name('quote.edit');
-    Route::post('/edit/{uuid}', [QuoteController::class, 'update'])->name('quote.update');
-    Route::delete('/edit/{uuid}', [QuoteController::class, 'destroy'])->name('quote.destroy');
-    Route::get('/{uuid}', [QuoteController::class, 'show'])->name('quote.show');
+    Route::get('/edit/{hashid}', [QuoteController::class, 'edit'])->name('quote.edit');
+    Route::post('/edit/{hashid}', [QuoteController::class, 'update'])->name('quote.update');
+    Route::delete('/edit/{hashid}', [QuoteController::class, 'destroy'])->name('quote.destroy');
 });
 
-Route::get('/', function() {
-    return redirect('en/qsdd');
+Route::middleware(['role:admin'])->group(function() {
+    Route::get('/users', [UserController::class, 'index'])->name('user.index');
+    Route::post('/user/{hashid}/role', [UserController::class, 'changeRole'])->name('user.role');
 });
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::view('/about', 'about')->name('about');
+Route::view('/contribute', 'contribute')->name('contribute');
+Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
+Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
+Route::get('/{hashid}', [QuoteController::class, 'show'])->name('quote.show');
+
