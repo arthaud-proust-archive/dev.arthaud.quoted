@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', $user->name."'s quotes")
+@section('title', "Citations de ".$user->name)
 @section('content')
 <main>
     <h1 id="hero" class="hero-min">

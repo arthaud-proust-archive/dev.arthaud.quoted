@@ -1,7 +1,7 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
 
-@section('title', "Quote by ".$quote->author)
+@section('title', "Citation de ".$quote->author)
 @section('description', '"'.$quote->content.'"')
 @section('content')
 <main id="quote">

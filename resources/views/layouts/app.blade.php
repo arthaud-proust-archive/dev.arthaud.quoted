@@ -1,7 +1,7 @@
 <?php 
 
-$description = View::hasSection('description')?View::getSection('description'):'Read, write and share all types of quotes around the world.';
-$title = View::hasSection('title')?View::getSection('title').' - '.config('app.name', 'Quotes'):'Quotes';
+$description = View::hasSection('description')?View::getSection('description'):'Lisez, écrivez et partagez des citations quelles qu\'elles soient. Par arthaud Proust.';
+$title = View::hasSection('title')?View::getSection('title').' - '.config('app.name', 'Quoted'):'Quoted';
 ?>
 
 
@@ -31,16 +31,16 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <meta name="target" content="all">
     <meta name="author" content="Arthaud Proust">
     <meta name="owner" content="Arthaud Proust">
-    <meta name="language" content="en">
+    <meta name="language" content="fr">
 
-    <meta http-equiv="content-language" content="en" />
+    <meta http-equiv="content-language" content="fr" />
     <meta name="url" content="https://quoted.arthaud.dev">
     <meta name="identifier-URL" content="https://quoted.arthaud.dev">
     <link rel="canonical" href="https://quoted.arthaud.dev" />
 
     <meta name="subject" content="Quotes">
     <meta name="description" content="{{ $description }}" />
-    <meta name="keywords" content="quoted, philosophie, litterature, arthaud, proust">
+    <meta name="keywords" content="quoted, citations, philosophie, litterature, arthaud, proust">
     <meta name="theme-color" content="#16161a">
 
     <meta property="og:type" content="website" />
@@ -58,14 +58,14 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <meta property="twitter:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Quotes" />
+    <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#16161a">
 
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "Organization",
-            "name": "{{config('app.name', 'Quotes')}}",
+            "name": "{{config('app.name', 'Quoted')}}",
             "url": "https://quoted.arthaud.dev",
             "address": "none",
             "sameAs": [

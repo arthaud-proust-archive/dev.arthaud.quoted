@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "All quotes")
+@section('title', "Utilisateurs")
 @section('content')
 <main>
 

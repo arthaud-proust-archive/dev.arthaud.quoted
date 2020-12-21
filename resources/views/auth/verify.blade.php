@@ -1,5 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app', ['requirementsJs' => ['app']])
 
+
+@section('title', "Vérifier l'adresse email")
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

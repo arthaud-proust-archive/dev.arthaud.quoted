@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "Edition")
+@section('title', "Édition")
 @section('content')
 <main>
     <h2>@lang('content.edit.title')</h2>

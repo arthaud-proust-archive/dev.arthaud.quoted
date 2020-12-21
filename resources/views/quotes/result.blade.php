@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "Search result")
+@section('title', "Recherche")
 @section('content')
 <main>
     

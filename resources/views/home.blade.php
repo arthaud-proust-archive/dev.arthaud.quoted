@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "Home")
+@section('title', "Accueil")
 @section('content')
 <main>
     <h1 id="hero" class="no-select" class="fade">{{config('app.name', 'Quotes')}}</h1>

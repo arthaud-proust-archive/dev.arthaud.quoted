@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "About")
+@section('title', "Contribuer")
 @section('content')
 <main class="min">
     <h1 id="hero" class="hero-min">@lang('content.contribute.title')</h1>

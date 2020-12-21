@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "About")
+@section('title', "Profil de ".$user->name)
 @section('content')
 <main class="min">
     <h2 class="hero-min">

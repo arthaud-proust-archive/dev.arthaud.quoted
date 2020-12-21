@@ -1,5 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app', ['requirementsJs' => ['app']])
 
+
+@section('title', "Connexion")
 @section('content')
 <main>
     <!-- <h1 id="hero">@lang('content.auth.title.login')</h1> -->

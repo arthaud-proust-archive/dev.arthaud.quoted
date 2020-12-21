@@ -1,6 +1,6 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
-@section('title', "New quote")
+@section('title', "Nouvelle citation")
 @section('content')
 <main>
     <h2>@lang('content.add.title')</h2>
