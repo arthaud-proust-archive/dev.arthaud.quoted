@@ -375,6 +375,7 @@ main {
         font-size: 3.2rem;
         font-weight: 600;
         margin: 0;
+        overflow-wrap: break-word;
         //word-break: break-all;
         hyphens:auto;
         -webkit-hyphens:auto;
@@ -518,6 +519,7 @@ main form {
         margin-top: 70px;
         position: relative;
         display: block;
+        overflow-wrap: break-word;
         //word-break: break-all;
         hyphens: auto;
         -webkit-hyphens: auto;
