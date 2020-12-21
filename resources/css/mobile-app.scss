@@ -334,7 +334,12 @@ main {
         font-size: 2rem;
         font-weight: 600;
         margin: 0;
-        word-break: break-all;
+                //word-break: break-all;
+                hyphens:auto;
+                -webkit-hyphens:auto;
+                -moz-hyphens:auto;
+                -ms-hyphens:auto;
+                -webkit-hyphens:auto;
     }
     .quoteCard-author {
         font-size: 1.3rem;
@@ -485,7 +490,12 @@ main form {
         font-weight: 400;
         position: relative;
         display: block;
-        word-break: break-all;
+        //word-break: break-all;
+        hyphens:auto;
+        -webkit-hyphens:auto;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
     }
 }
 

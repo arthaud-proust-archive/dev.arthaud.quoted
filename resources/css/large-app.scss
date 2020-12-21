@@ -271,7 +271,7 @@ main {
         flex-wrap: wrap;
         justify-content: space-between;
 
-        .article {
+        article {
             margin-left: 30px;
             margin-right: 30px;
         }
@@ -288,7 +288,7 @@ main {
         }
     }
     article {
-        flex: 1 0 40%;
+        flex: 1 0 400px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -356,7 +356,8 @@ main {
         flex-direction: column;
         align-items: flex-start;
         color: var(--w2);
-        margin: 10px -20px;
+        // margin: 10px -20px;
+        margin: 10px 0px;
         padding: 15px 35px 20px 20px;
         border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -374,8 +375,13 @@ main {
         font-size: 3.2rem;
         font-weight: 600;
         margin: 0;
-        word-break: break-all;
-    }
+        //word-break: break-all;
+        hyphens:auto;
+        -webkit-hyphens:auto;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+}
     .quoteCard-author {
         font-size: 1.5rem;
         font-weight: 300;
@@ -512,8 +518,12 @@ main form {
         margin-top: 70px;
         position: relative;
         display: block;
-        word-break: break-all;
-    }
+        //word-break: break-all;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+}
 
 }
 
