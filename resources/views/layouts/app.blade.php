@@ -87,8 +87,8 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
               
         @if(session('status'))
         <div class="alert-container">
-            <div class="alert alert-{{session('status')}}" role="alert">
-                {{ session('content') }}
+            <div class="alert alert-{{session('content')?session('status'):'info'}}" role="alert">
+                {{ session('content')?session('content'):session('status') }}
                 <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"> -->
                     <!-- <span aria-hidden="true">&times;</span> -->
                 <!-- </button> -->

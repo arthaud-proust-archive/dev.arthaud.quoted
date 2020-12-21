@@ -27,7 +27,7 @@ html[data-theme="dark"]:root {
     --r0: rgb(184, 31, 31);
 
     --warn: rgb(210, 105, 30);
-    --success: rgb(31 120 39);
+    --success: rgb(48 152 57);
     --error: rgb(184, 31, 31);
     --info: rgb(60, 60, 180);
 }
@@ -203,6 +203,7 @@ a:hover {
     text-align: center;
 
     .alert {
+        font-weight: 600;
         display: inline-block;
         margin: 20px auto 15px auto;
         padding: 15px 20px;
@@ -288,7 +289,7 @@ main {
         }
     }
     article {
-        flex: 1 0 400px;
+        flex: 1 0.8 500px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -345,6 +346,21 @@ main {
         }
     }
 
+    #all-quotes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .quoteCard {
+            max-width: 45%;
+            // flex: 1 1 40%;
+            // display: flex;
+            a {
+                // min-width: 300px;
+                margin: 40px 30px;
+            }
+        }
+    }
     
 }
 
@@ -357,7 +373,7 @@ main {
         align-items: flex-start;
         color: var(--w2);
         // margin: 10px -20px;
-        margin: 10px 0px;
+        margin: 40px 0px;
         padding: 15px 35px 20px 20px;
         border-radius: 20px;
         -webkit-border-radius: 20px;

@@ -197,7 +197,7 @@ return [
         'quotes' => [
             'title' => [
                 'other'=>'{0} Aucune citation publiée par|{1} Citation publiée par |[2,*] Citations publiées par ',
-                'me'=> "{0} Aucune citation publiée|{1} Votre citation |[2,*] Votre citations"
+                'me'=> "{0} Aucune citation publiée|{1} Votre citation |[2,*] Vos citations"
             ]
         ],
         'index' => [

@@ -27,7 +27,7 @@
         
         <label>
             @lang('content.auth.fields.rpassword')
-            <input id="password-confirm" type="password" name="password-confirm" value="{{ old('password-confirm') }}" required>
+            <input id="password_confirmation" type="password" name="password_confirmation" value="{{ old('password_confirmation') }}" required>
             @error('password-confirm')
                 <span class="invalid-feedback" role="alert">{{ $message }}</span>
             @enderror

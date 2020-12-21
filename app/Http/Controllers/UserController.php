@@ -25,7 +25,7 @@ class UserController extends Controller
         } else if(!$user = User::firstWhere('id', decodeId($hashid))) {
             abort(404);
         }
-        return view('user.show', ["user"=>$user, "quotes"=>Quote::where('user', $hashid)->get()]);
+        return view('user.show', ["user"=>$user, "quotes"=>Quote::where('user', $user->hashid)->get()]);
     }
 
     public function quotes(Request $request, $hashid=null) {
@@ -34,7 +34,7 @@ class UserController extends Controller
         } else if(!$user = User::firstWhere('id', decodeId($hashid))) {
             abort(404);
         }
-        return view('user.quotes', ["user"=>$user, "quotes"=>Quote::where('user', $hashid)->get()]);
+        return view('user.quotes', ["user"=>$user, "quotes"=>Quote::where('user', $user->hashid)->get()]);
     }
 
     public function edit(Request $request) {

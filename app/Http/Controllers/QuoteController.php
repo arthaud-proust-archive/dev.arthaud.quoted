@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use App\Models\Quote;
 use App\Models\Group;
 use Validator;
+use Illuminate\Validation\Rule;
 use App;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,7 +44,7 @@ class QuoteController extends Controller
         $validator = Validator::make($request->all(), [
             'group' => 'required',
             'author' => 'required|string|max:30',
-            'content' => 'required|string|max:150',
+            'content' => 'required|string|max:150|unique:quotes,content',
         ]);
         if ($validator->fails()) {
             return back()->withInput()->withErrors($validator);
@@ -77,16 +78,18 @@ class QuoteController extends Controller
     }
 
     public function update(Request $request, $hashid) {
+        if(!$quote = Quote::firstWhere('id', decodeId($hashid))) {
+            abort('404');
+        }
+
         $validator = Validator::make($request->all(), [
             'author' => 'required|string|max:30',
-            'content' => 'required|string|max:150',
+            'content' => ['required','string', 'max:150', Rule::unique('quotes', 'content')->ignore($quote->id)]
         ]);
         if ($validator->fails()) {
             return back()->withInput()->withErrors($validator);
         }
-        if(!$quote = Quote::firstWhere('id', decodeId($hashid))) {
-            abort('404');
-        }
+        
 
         if(!$quote->canUserTouch())
             abort('403');

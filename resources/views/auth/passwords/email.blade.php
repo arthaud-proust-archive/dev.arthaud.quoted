@@ -4,12 +4,6 @@
 <main>
     <h2 >@lang('content.auth.title.reset')</h2>
 
-    @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
-
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
 
