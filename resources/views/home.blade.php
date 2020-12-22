@@ -6,10 +6,11 @@
     <h1 id="hero" class="no-select" class="fade">{{config('app.name', 'Quotes')}}</h1>
     @guest
         <h2 id="hero-subtitle" class="subtitle fade">@lang('content.home.subtitle')</h2>
-
-        <div class="articles">
+    @else 
+        <h2 id="hero-subtitle" class="subtitle fade">{{ Auth::user()->name}}</h2>
     @endguest
 
+    <div class="articles">
 
     <article id="daily-quote">
         <header>
@@ -30,13 +31,7 @@
         </section>
     </article>
 
-
     @auth
-        <h2 id="hero-subtitle" class="subtitle fade">{{ Auth::user()->name}}</h2>
-
-        <div class="articles">
-
-
         <article id="me">
             <header>
                 <h3>
