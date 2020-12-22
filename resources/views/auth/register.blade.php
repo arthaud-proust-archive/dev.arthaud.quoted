@@ -26,6 +26,7 @@
             @enderror
         </label>
 
+
         <label>
             @lang('content.auth.fields.password')
             <input id="password" type="password"  name="password" value="{{ old('password') }}" required>
@@ -42,7 +43,7 @@
             @enderror
         </label>
 
-
+        <sup>En créant un compte vous acceptez les <a href="{{ asset('assets/conditions utilisation.pdf') }}">conditions d'utilisation</a></sup>
         <button type="submit" class="btn btn-primary">
             @lang('content.auth.register')
         </button>

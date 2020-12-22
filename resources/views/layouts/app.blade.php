@@ -102,6 +102,7 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
             <a class="credit" href="https://arthaud.dev">@lang('content.footer.credit')</a>
             <span class="copyright">&copy 2020 @lang('content.footer.right')</span>
             <!-- <a class="about" href="{{ route('about') }}">@lang('content.footer.more')</a> -->
+            <sub><a class="about" href="{{ route('legal') }}">@lang('content.footer.legal')</a></sub>
         </footer>
     </div>
 </body>

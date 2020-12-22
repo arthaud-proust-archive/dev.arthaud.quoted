@@ -206,9 +206,20 @@ return [
 
     ],
 
+    'legal' => [
+        'title' => 'Documents légaux',
+        'intro' => [
+            'title' => 'Liste des documents légaux',
+            'mentions' => 'Mentions légales',
+            'rgpd' => 'Politique RGPD',
+            'conditions' => 'Conditions d\'utilisation',
+        ]
+    ],
+
     'footer' => [
         'credit' => 'Développé avec passion par Arthaud Proust',
         'right' => 'Tous droits réservés',
-        'more' => 'À propos et plus'
+        'more' => 'À propos et plus',
+        'legal' => 'Document légaux'
     ]
 ];
