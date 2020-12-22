@@ -51,5 +51,5 @@ Route::post('/search', [QuoteController::class, 'search'])->name('quote.search')
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
 Route::get('/{hashid}', [QuoteController::class, 'show'])->name('quote.show');
 
-Route::view('/{a}/{e}', 'errors.404')->name('error.404');
-Route::view('/{a}/{e}/{f}', 'errors.404')->name('error.404');
+Route::view('/{a}/{e}', 'errors.404');
+Route::view('/{a}/{e}/{f}', 'errors.404');
