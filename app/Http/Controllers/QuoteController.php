@@ -10,10 +10,11 @@ use Validator;
 use Illuminate\Validation\Rule;
 use App;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ConfigController;
 
 
 
-class QuoteController extends Controller
+class QuoteController extends ConfigController
 {
     public function index(Request $request) {
         if(request('group', 'all') == 'all') {
@@ -59,7 +60,8 @@ class QuoteController extends Controller
             'author' => request('author'),
             'content' => request('content'),
             'user' => Auth::user()->hashid,
-            'show' => $group?$group->canUserPost():true
+            'show' => $group?$group->canUserPost():true,
+            'daily_count' => self::get('daily_step')
         ]);
         return redirect()->route('quote.show', ['hashid'=>$quote->hashid])
             ->with('status', $quote->show?'success':'warn')
@@ -101,6 +103,7 @@ class QuoteController extends Controller
         $quote->author = request('author');
         $quote->content = request('content');
         $quote->show = $group?$group->canUserPost():true;
+        $quote->daily_count = self::get('daily_step');
         $quote->touch();
         $quote->save();
 
@@ -136,5 +139,22 @@ class QuoteController extends Controller
             ->orWhere('content', 'LIKE', "%$request->search%")
             ->get();
         return view('quotes.result', ['search'=>$request->search, 'quotes'=>$quotes]);
+    }
+
+    public static function dailyRandom() {
+        $step = self::get('daily_step');
+        $quotes = Quote::verified()->where('daily_count', $step)->get();
+        $l = $quotes->count();
+
+        if($l==0) {
+            self::set('daily_step', intval($step)+1);
+            self::dailyRandom();
+        } else {
+            $n = rand(0, $l-1);
+            $quote = $quotes->values()[$n];
+            $quote->daily_count+=1;
+            $quote->save();
+            self::set('daily_quote', $quote->id);
+        }
     }
 }

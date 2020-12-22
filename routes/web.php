@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ConfigController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,9 @@ Route::middleware(['role:admin'])->group(function() {
     Route::post('/user/{hashid}/role', [UserController::class, 'changeRole'])->name('user.role');
 });
 
+Route::get('/config', [ConfigController::class, 'index']);
+Route::get('/config/{key}', [ConfigController::class, 'show']);
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'about')->name('about');
@@ -50,6 +54,8 @@ Route::view('/contribute', 'contribute')->name('contribute');
 Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
 Route::get('/{hashid}', [QuoteController::class, 'show'])->name('quote.show');
+
+
 
 Route::view('/{a}/{e}', 'errors.404');
 Route::view('/{a}/{e}/{f}', 'errors.404');

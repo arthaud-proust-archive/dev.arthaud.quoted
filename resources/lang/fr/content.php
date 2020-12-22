@@ -31,6 +31,9 @@ return [
         'toverif' => [
             'title' => 'Citations à vérifier',
         ],
+        'daily' => [
+            'title' => 'Citation du jour',
+        ],
         'philo' => [
             'title' => 'Philo',
             'more' => 'En voir plus'

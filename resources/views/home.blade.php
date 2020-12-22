@@ -10,6 +10,27 @@
         <div class="articles">
     @endguest
 
+
+    <article id="daily-quote">
+        <header>
+            <h3>@lang('content.home.daily.title')</h3>
+        </header>
+        <section class="quoteCard">
+            <a href="{{ route('quote.show', ['hashid'=>$dailyQuote->hashid]) }}">
+            <blockquote class="quoteCard-content">
+                {{$dailyQuote->content}}
+            </blockquote>
+            <span class="quoteCard-author">
+                {{$dailyQuote->author}}
+            </span>
+            <span class="quoteCard-updated_at">
+                {{$dailyQuote->updated_at}}
+            </span>
+            </a>
+        </section>
+    </article>
+
+
     @auth
         <h2 id="hero-subtitle" class="subtitle fade">{{ Auth::user()->name}}</h2>
 
@@ -70,6 +91,9 @@
         @endforeach
     </article>
     @endif
+
+
+
 
 
     <article id="philo-quotes">

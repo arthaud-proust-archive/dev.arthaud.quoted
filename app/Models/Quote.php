@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ConfigController;
 
 class Quote extends Model
 {
@@ -21,7 +22,8 @@ class Quote extends Model
         'author',
         'content',
         'user',
-        'show'
+        'show',
+        'daily_count'
     ];
 
     public function getHashidAttribute()
@@ -50,5 +52,10 @@ class Quote extends Model
     public function scopeUnVerified($query)
     {
         return $query->where('show', 0);
+    }
+
+    public function scopeDaily($query)
+    {
+        return $query->firstWhere('id', ConfigController::get('daily_quote'));
     }
 }
