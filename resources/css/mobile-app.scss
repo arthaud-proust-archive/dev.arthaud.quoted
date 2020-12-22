@@ -48,6 +48,29 @@ body {
     overflow-x: hidden;
 }
 
+kbd {
+    background: var(--b0);
+    color: var(--p2);
+    padding: 10px 15px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.no-select {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.select-all {
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
 a { 
     display: inline-block;
     text-decoration: none;
@@ -498,6 +521,26 @@ main form {
         -moz-hyphens:auto;
         -ms-hyphens:auto;
         -webkit-hyphens:auto;
+    }
+
+    #share {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding: 50px 0;
+
+        #share-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1.3rem;
+
+            kbd {
+                font-weight: 600;   
+                font-size: 1.1rem;
+                margin-top: 8px;
+            }
+        }
     }
 }
 

@@ -12,6 +12,10 @@ if(!function_exists('encodeId')) {
 if(!function_exists('decodeId')) {
     function decodeId($hashid) {
         $hashids = new Hashids('', 5);
-        return $hashids->decode($hashid)[0];
+        try {
+            return $hashids->decode($hashid)[0];
+        } catch(Exception $e) {
+            abort('404');
+        }
     }
 }

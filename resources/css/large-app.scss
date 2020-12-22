@@ -74,6 +74,17 @@ body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
+
+kbd {
+    background: var(--b0);
+    color: var(--p2);
+    padding: 10px 15px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
 .no-select {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -95,7 +106,7 @@ a {
     &.btn, &#changeLang {
         position: relative;
         text-align: center;
-        float: right;
+        // float: right;
         width: auto;
         margin: 10px 10px 0 10px;
         padding: 10px 15px;
@@ -541,7 +552,28 @@ main form {
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
-}
+    }
+
+    #share {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        padding: 50px 10px;
+
+        #share-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1.3rem;
+
+            kbd {
+            font-weight: 600;
+
+                margin-top: 8px;
+            }
+        }
+    }
 
 }
 

@@ -14,7 +14,14 @@
     </span>
 
     @if($quote->canUserTouch()) 
-    <a id="toEdit" href="{{ route('quote.edit', ['hashid'=>$quote->hashid]) }}">@lang('content.show.edit')</a>
+    <a id="toEdit" class="btn" href="{{ route('quote.edit', ['hashid'=>$quote->hashid]) }}">@lang('content.show.edit')</a>
     @endif
+
+    <div id="share">
+        <div id="share-box">
+        Partager la citation 
+        <kbd class="select-all">{{ config('app.url') }}/{{ $quote->hashid}}</kbd>
+        </div>
+    </div>
 </main>
 @endsection
