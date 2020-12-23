@@ -41,7 +41,7 @@ class QuoteController extends ConfigController
         if(!$quote = Quote::firstWhere('id', $this->get('daily_quote'))) {
             abort(404);
         }
-        return view('quotes.show', ["quote"=>$quote]);
+        return view('quotes.daily', ["quote"=>$quote]);
     }
 
     public function create(Request $request) {
