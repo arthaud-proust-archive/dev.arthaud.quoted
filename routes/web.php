@@ -43,16 +43,15 @@ Route::middleware(['role:admin'])->group(function() {
     Route::post('/user/{hashid}/role', [UserController::class, 'changeRole'])->name('user.role');
 });
 
-Route::get('/config', [ConfigController::class, 'index']);
-Route::get('/config/{key}', [ConfigController::class, 'show']);
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::view('/about', 'about')->name('about');
+// Route::view('/about', 'about')->name('about');
 Route::view('/legal', 'legal')->name('legal');
 Route::view('/contribute', 'contribute')->name('contribute');
 Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quote.index');
+Route::get('/daily', [QuoteController::class, 'daily'])->name('quote.daily');
 Route::get('/{hashid}', [QuoteController::class, 'show'])->name('quote.show');
 
 
