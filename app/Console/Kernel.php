@@ -24,10 +24,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
-        $schedule->command('sitemap:generate')->daily();
-        $schedule->command('optimize')->daily();
-        $schedule->command('dailyrandom:generate')->daily();
+        // $schedule->command('inspire')->everyMinute();
+        // $schedule->command('dailyrandom:generate')->everyMinute();
+
+        // $schedule->command('sitemap:generate')->dailyAt('00:00')->timezone('Europe/Paris');;
+        // $schedule->command('optimize')->dailyAt('00:00')->timezone('Europe/Paris');;
+        // $schedule->command('dailyrandom:generate')->dailyAt('00:00')->timezone('Europe/Paris');;
     }
 
     /**
