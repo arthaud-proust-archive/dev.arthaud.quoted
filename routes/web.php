@@ -46,7 +46,7 @@ Route::middleware(['role:admin'])->group(function() {
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::view('/about', 'about')->name('about');
+Route::view('/about', 'about')->name('about');
 Route::view('/legal', 'legal')->name('legal');
 Route::view('/contribute', 'contribute')->name('contribute');
 Route::post('/search', [QuoteController::class, 'search'])->name('quote.search');

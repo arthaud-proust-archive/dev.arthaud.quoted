@@ -135,7 +135,7 @@ return [
     ],
 
     'about' => [
-        'title' => 'Pourquoi, quoi donc?',
+        'title' => 'À propos',
         'why' => [
             'title' => 'Pourquoi?',
             'content' => [
@@ -145,15 +145,15 @@ return [
         'how' => [
             'title' => 'Comment?',
             'content' => [
-                'Pour contribuer il faut se créer un compte, puis rajouter ses citations dans la catégorie souhaitée. Certaines catégories comme "Philo" nécessitent une vérification de la citation pour qu\'elle soit affichée, le temps qu\'on vérifie qu\'elle soit exacte.'
+                'Pour contribuer il faut se créer un compte, puis rajouter ses citations dans la catégorie souhaitée.',
+                'Certaines catégories comme "Philo" nécessitent que l\'on vérifie que la citation soit exacte avant d\'être affichée, par soucis de fiabilité.'
             ]
         ],
         'what' => [
             'title' => 'C\'est quoi?',
             'content' => [
-                "\"Quoted.\" est un site ou sont regroupées de nombreuses citations philosophiques mais aussi celles de tout le monde. Comme n'importe qui peut y rajouter sa citation, le site et son propriétaire, ne peuvent pas contrôler tout le contenu publié: si un contenu s'avère être inapproprié merci de nous le signaler à contact@arthaud.dev.",
-                "Vous verrez peut-être du contenu politque, limite ou controversé, des paroles d'humour noir, des citations philosophiques et officielles. Gardez toutefois à l'esprit que le site ne supporte aucun contenu raciste, sexiste ou haineux.",
-                "Lorsque la tendance actuelle est à la polémique de tout sujet, il faut laisser une place à la liberté d'expression et rester ouvert d'esprit. Évidemment, si vous pensez un contenu inapproprié, vous pouvez contacter contact@proust.dev, ou supprimer par vous même le contenu - qui ne serait pas une phrase hors contexte borderline - réellement haineux, raciste ou sexiste."
+                "\"Quoted.\" est un site ou sont regroupées de nombreuses citations philosophiques mais aussi celles de tout le monde. N'importe qui peut y rajouter sa propre citation.",
+                "Si un contenu s'avère être inapproprié merci de nous le signaler à contact@arthaud.dev. Gardez toutefois à l'esprit que le site ne supporte aucun contenu raciste, sexiste ou haineux."
             ]
         ],
     ],
