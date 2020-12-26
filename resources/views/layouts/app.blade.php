@@ -14,6 +14,10 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <meta content=origin name=referrer>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;600;700&display=swap" rel="stylesheet">
     <title>{{ $title }}</title>
     <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32">
@@ -60,7 +64,9 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#16161a">
-
+    <link rel=icon href=https://quoted.arthaud.dev/favicon.ico>
+    <link rel=canonical href=https://quoted.arthaud.dev/ >
+    
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
