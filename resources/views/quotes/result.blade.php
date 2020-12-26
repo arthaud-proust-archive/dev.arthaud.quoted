@@ -10,7 +10,7 @@
     <article id="all-quotes">
     @foreach($quotes as $quote) 
     <section class="quoteCard">
-        <a href="{{ route('quote.show', ['uuid'=>$quote->uuid]) }}">
+        <a href="{{ route('quote.show', ['hashid'=>$quote->hashid]) }}">
         <blockquote class="quoteCard-content">
             {{$quote->content}}
         </blockquote>
