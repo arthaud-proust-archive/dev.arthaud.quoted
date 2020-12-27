@@ -19,6 +19,7 @@ return [
 
     'home' => [
         'subtitle' => 'Une phrase hors-contexte est une citation.',
+        'quotescount' => 'Exactement :count citations sur ce site',
         'me' => [
             'title' => 'Profil et actions',
             'logout'=>'Se déconnecter',
@@ -33,6 +34,7 @@ return [
         ],
         'daily' => [
             'title' => 'Citation du jour',
+            'more' => 'Plus'
         ],
         'philo' => [
             'title' => 'Philo',
