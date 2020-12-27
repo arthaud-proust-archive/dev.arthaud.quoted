@@ -4,17 +4,23 @@
 @section('content')
 <main>
     <h1 id="hero" class="no-select" class="fade">{{config('app.name', 'Quotes')}}</h1>
+    <!--
     @guest
         <h2 id="hero-subtitle" class="subtitle fade">@lang('content.home.subtitle')</h2>
     @else 
         <h2 id="hero-subtitle" class="subtitle fade">{{ Auth::user()->name}}</h2>
     @endguest
-
+    -->
+    <h2 id="hero-subtitle" class="subtitle fade">@lang('content.home.quotescount', $quotesCount) </h2>
+    
     <div class="articles">
 
     <article id="daily-quote">
         <header>
-            <h3>@lang('content.home.daily.title')</h3>
+            <h3>
+                @lang('content.home.daily.title') - 
+                <a href="{{ route('quote.daily') }}">@lang('content.home.daily.more')</a>
+            </h3>
         </header>
         <section class="quoteCard">
             <a href="{{ route('quote.show', ['hashid'=>$dailyQuote->hashid]) }}">
