@@ -11,7 +11,7 @@
         <h2 id="hero-subtitle" class="subtitle fade">{{ Auth::user()->name}}</h2>
     @endguest
     -->
-    <h2 id="hero-subtitle" class="subtitle fade">@lang('content.home.quotescount', $quotesCount) </h2>
+    <h2 id="hero-subtitle" class="subtitle fade">@lang('content.home.quotescount', ['count'=>$quotesCount]) </h2>
     
     <div class="articles">
 
