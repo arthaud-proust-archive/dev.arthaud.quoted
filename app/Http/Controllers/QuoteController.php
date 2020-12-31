@@ -32,8 +32,10 @@ class QuoteController extends ConfigController
         if(!$quote = Quote::firstWhere('id', decodeId($hashid))) {
             abort(404);
         }
+        $quote->timestamps = false;
         $quote->views +=1;
         $quote->save();
+        $quote->timestamps = true;
         return view('quotes.show', ["quote"=>$quote]);
     }
 
