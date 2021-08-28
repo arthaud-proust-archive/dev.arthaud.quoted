@@ -1,6 +1,6 @@
 <?php 
 
-$description = View::hasSection('description')?View::getSection('description'):'Lisez, écrivez et partagez des citations quelles qu\'elles soient. Par arthaud Proust.';
+$description = View::hasSection('description')?View::getSection('description'):'Lisez, écrivez et partagez des citations quelles qu\'elles soient. Par Arthaud Proust.';
 $title = View::hasSection('title')?View::getSection('title').' - '.config('app.name', 'Quoted'):'Quoted';
 ?>
 
@@ -53,19 +53,30 @@ $title = View::hasSection('title')?View::getSection('title').' - '.config('app.n
     <meta property="og:description" content="{{ $description }}" />
     <!-- <meta property="og:site_name" content="{{config('app.name', 'Quotes')}}" /> -->
     <meta property="og:locale" content="en" />
-    <meta property="og:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
+    <meta property="og:image" content="https://quoted.arthaud.dev/assets/img/hero.min.png" />
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="{{ $title }}" />
     <meta property="twitter:description" content="{{ $description }}" />
     <meta property="twitter:site" content="https://quoted.arthaud.dev" />
-    <meta property="twitter:image" content="https://quoted.arthaud.dev/img/hero.min.png" />
+    <meta property="twitter:image" content="https://quoted.arthaud.dev/assets/img/hero.min.png" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="{{ $title }}" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#16161a">
     <link rel=icon href=https://quoted.arthaud.dev/favicon.ico>
     <link rel=canonical href=https://quoted.arthaud.dev/ >
+
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-180x180.png" />
     
     <script type="application/ld+json">
         {
