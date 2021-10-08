@@ -37,7 +37,13 @@
 # 600
 
 
+
 <Ifmodule mod_headers.c>
+
+    <Files "manifest.json">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+    </Files>
 
     <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
         Header set Cache-Control "max-age=2592000, public"
