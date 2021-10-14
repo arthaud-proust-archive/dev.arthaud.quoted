@@ -7,10 +7,10 @@
 <main id="quote">
     <h1 id="quote-content">{{$quote->content}}</h1>
     <span class="quote-author">
-        {{$quote->author}}
+        Citation par <b>{{$quote->author}}</b>
     </span>
     <span class="quote-updated_at">
-        Ajouté le {{$quote->created_at}} par {{$quote->userModel->name}}
+        ajoutée le {{$quote->created_at->format('d M Y')}} par {{$quote->userModel->name}}
     </span>
 
     @if($quote->canUserTouch()) 
