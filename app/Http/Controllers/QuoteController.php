@@ -57,7 +57,9 @@ class QuoteController extends ConfigController
             'content' => 'required|string|max:150|unique:quotes,content',
         ]);
         if ($validator->fails()) {
-            return back()->withInput()->withErrors($validator);
+            // dd($request);
+            return back();
+            // return back()->withInput()->withErrors($validator);
         }
 
         if ((!$group = Group::firstWhere('uuid', request('group'))) && request('group')!=="none") {

@@ -1,16 +1,13 @@
 @extends('layouts.app', ['requirementsJs' => ['app']])
 
 
-@section('title', "Error 400 - Quote by Server")
+@section('title', "400 Mauvaise requête - Quote by Server")
 @section('description', '"Wrong request"')
 @section('content')
 <main id="quote">
-    <h3 class="quote-author">
-        Error client (code:400)
-    </h3>
-    <h1 id="quote-content">Wrong request</h1>
+    <h1 id="quote-content">"400 Mauvaise requête"</h1>
     <span class="quote-author">
-        Server
+        Par Serveur
     </span>
     <span class="quote-updated_at">
         {{Carbon\Carbon::now()}}

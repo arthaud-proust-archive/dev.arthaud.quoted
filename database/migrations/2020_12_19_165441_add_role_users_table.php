@@ -13,9 +13,11 @@ class AddRoleUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->unsignedTinyInteger('role')->default(1);
-        });
+        if (!Schema::hasColumn('users', 'role')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->unsignedTinyInteger('role')->default(1);
+            });
+        }
     }
 
     /**

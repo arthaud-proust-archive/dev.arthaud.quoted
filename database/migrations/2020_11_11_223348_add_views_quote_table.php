@@ -13,9 +13,11 @@ class AddViewsQuoteTable extends Migration
      */
     public function up()
     {
-        Schema::table('quotes', function (Blueprint $table) {
-            $table->bigInteger('views')->default(0);
-        });
+        if (!Schema::hasColumn('quotes', 'views')) {
+            Schema::table('quotes', function (Blueprint $table) {
+                $table->bigInteger('views')->default(0);
+            });
+        }
     }
 
     /**

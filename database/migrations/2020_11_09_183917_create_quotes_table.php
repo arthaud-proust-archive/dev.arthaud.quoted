@@ -13,14 +13,16 @@ class CreateQuotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('quotes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('uuid');
-            $table->string('group');
-            $table->string('author');
-            $table->text('content');
-        });
+        if (!Schema::hasTable('quotes')) {
+            Schema::create('quotes', function (Blueprint $table) {
+                $table->id();
+                $table->timestamps();
+                $table->string('uuid');
+                $table->string('group');
+                $table->string('author');
+                $table->text('content');
+            });
+        }
     }
 
     /**

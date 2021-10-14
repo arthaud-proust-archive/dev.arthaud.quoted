@@ -57,6 +57,10 @@ kbd {
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: scroll;
 }
 .no-select {
     -moz-user-select: none;

@@ -13,10 +13,12 @@ class CreateConfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('config', function (Blueprint $table) {
-            $table->string('key')->unique();
-            $table->mediumText('value');
-        });
+        if (!Schema::hasTable('config')) {
+            Schema::create('config', function (Blueprint $table) {
+                $table->string('key')->unique();
+                $table->mediumText('value');
+            });
+        }
     }
 
     /**

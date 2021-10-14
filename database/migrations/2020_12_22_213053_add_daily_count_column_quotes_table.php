@@ -13,9 +13,11 @@ class AddDailyCountColumnQuotesTable extends Migration
      */
     public function up()
     {
-        Schema::table('quotes', function (Blueprint $table) {
-            $table->unsignedSmallInteger('daily_count')->default(0);
-        });
+        if (!Schema::hasColumn('quotes', 'daily_count')) {
+            Schema::table('quotes', function (Blueprint $table) {
+                $table->unsignedSmallInteger('daily_count')->default(0);
+            });
+        }
     }
 
     /**

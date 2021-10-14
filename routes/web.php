@@ -56,5 +56,5 @@ Route::get('/{hashid}', [QuoteController::class, 'show'])->name('quote.show');
 
 
 
-Route::view('/{a}/{e}', 'errors.404');
-Route::view('/{a}/{e}/{f}', 'errors.404');
+// Route::view('/{a}/{e}', 'errors.404');
+// Route::view('/{a}/{e}/{f}', 'errors.404');

@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ConfigController;
+use App\Models\User;
+
 
 class Quote extends Model
 {
@@ -23,12 +25,22 @@ class Quote extends Model
         'content',
         'user',
         'show',
-        'daily_count'
+        'daily_count',
+        'source'
+    ];
+
+    protected $casts = [
+        'source' => 'array'
     ];
 
     public function getHashidAttribute()
     {
         return encodeId($this->id);
+    }
+
+    public function getUserModelAttribute()
+    {
+        return User::firstWhere('id', decodeId($this->user));
     }
 
     public function canUserTouch() 

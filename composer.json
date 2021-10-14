@@ -13,7 +13,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "hashids/hashids": "^4.1",
-        "laravel/framework": "^8.12",
+        "laravel/framework": "^8.54",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.1",
         "renatomarinho/laravel-page-speed": "^1.9",
@@ -65,7 +65,6 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "@php artisan migrate"
         ],
         "pre-update-cmd": [
         ]

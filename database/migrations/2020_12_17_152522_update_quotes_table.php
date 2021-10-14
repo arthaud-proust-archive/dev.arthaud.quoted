@@ -13,9 +13,11 @@ class UpdateQuotesTable extends Migration
      */
     public function up()
     {
-        Schema::table('quotes', function (Blueprint $table) {
-            $table->string('user')->default('vbmOe');
-        });
+        if (!Schema::hasColumn('quotes', 'user')) {
+            Schema::table('quotes', function (Blueprint $table) {
+                $table->string('user')->default('vbmOe');
+            });
+        }
     }
 
     /**
