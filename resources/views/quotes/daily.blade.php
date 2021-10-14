@@ -10,7 +10,7 @@
         {{$quote->author}}
     </span>
     <span class="quote-updated_at">
-        {{$quote->updated_at}}
+        Ajouté le {{$quote->created_at}} par {{$quote->userModel->name}}
     </span>
 
     @if($quote->canUserTouch()) 
